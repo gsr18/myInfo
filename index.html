@@ -1,0 +1,2410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gaurav Singh - Aspiring Python Developer skilled in Data Analysis & Visualization. First-year B.Tech student passionate about building solutions.">
+    <meta name="keywords" content="Python Developer, Data Analysis, Web Development, B.Tech Student, Programming">
+    <meta name="author" content="Gaurav Singh">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Gaurav Singh - Aspiring Python Developer">
+    <meta property="og:description" content="First-year B.Tech student passionate about Python, data analysis, and building products that solve real problems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gauravsingh.dev">
+    <meta property="og:image" content="https://gauravsingh.dev/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gaurav Singh - Aspiring Python Developer">
+    <meta name="twitter:description" content="First-year B.Tech student passionate about Python, data analysis, and building products that solve real problems.">
+    <meta name="twitter:image" content="https://gauravsingh.dev/twitter-card.jpg">
+    
+    <!-- Favicon Placeholders -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <title>Gaurav Singh - Aspiring Python Developer | Data Analysis & Visualization</title>
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gaurav Singh",
+        "jobTitle": "Aspiring Python Developer",
+        "description": "First-year B.Tech student passionate about Python, data analysis, web development, and building products that solve real problems.",
+        "url": "https://gauravsingh.dev",
+        "sameAs": [
+            "http://www.linkedin.com/in/gauravsingh10",
+            "https://github.com/gsr18",
+            "https://leetcode.com/u/GauravSingh78/"
+        ],
+        "knowsAbout": [
+            "Python",
+            "Data Analysis",
+            "Web Development",
+            "JavaScript",
+            "Machine Learning"
+        ]
+    }
+    </script>
+    
+    <style>
+        /* CSS Variables for Theme Management */
+        :root {
+            --bg-primary: #f7f9fc;
+            --bg-secondary: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --accent: #22c55e;
+            --accent-hover: #16a34a;
+            --border: #e2e8f0;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --shadow-hover: rgba(0, 0, 0, 0.15);
+            --gradient: linear-gradient(135deg, var(--accent), #10b981);
+            --radius: 8px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0b1220;
+            --bg-secondary: #111827;
+            --text-primary: #e5e7eb;
+            --text-secondary: #94a3b8;
+            --border: #1f2937;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --shadow-hover: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            transition: var(--transition);
+        }
+
+        /* Skip Link for Accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--accent);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: var(--radius);
+            z-index: 1000;
+        }
+
+        .skip-link:focus {
+            top: 6px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header and Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] header {
+            background: rgba(17, 24, 39, 0.95);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a.active::after,
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--text-primary);
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%2322c55e" opacity="0.1"/></svg>');
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .typewriter {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            min-height: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border-color: var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            font-size: 1.125rem;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px var(--shadow);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+        }
+
+        .now-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .learning-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .chip {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* Skills Section */
+        .skills-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--text-secondary);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .skill-level {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .skill-bar {
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--gradient);
+            border-radius: 3px;
+            transition: width 1s ease;
+            width: 0;
+        }
+
+        /* Projects Section */
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px) rotateX(2deg);
+            box-shadow: 0 20px 40px var(--shadow);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .project-card:hover {
+                transform: translateY(-5px);
+            }
+        }
+
+        .project-image {
+            height: 200px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.1) 50%, transparent 51%);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-small {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: var(--bg-secondary);
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: var(--radius);
+            position: relative;
+            margin: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        .modal-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .modal-close:hover {
+            background: var(--border);
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .modal-section p,
+        .modal-section li {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .modal-section ul {
+            padding-left: 1.5rem;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            margin-left: 1rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.75rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid var(--bg-primary);
+        }
+
+        .timeline-date {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-description {
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.875rem;
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            top: 100px;
+            right: 2rem;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 1001;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.error {
+            background: #ef4444;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: var(--bg-primary);
+            border: 2px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Print Styles */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            
+            header, .mobile-menu-btn, .theme-toggle, .modal, .toast {
+                display: none !important;
+            }
+            
+            body {
+                font-size: 12pt;
+                line-height: 1.4;
+            }
+            
+            .hero {
+                min-height: auto;
+                page-break-after: avoid;
+            }
+            
+            section {
+                padding: 2rem 0;
+                page-break-inside: avoid;
+            }
+            
+            .container {
+                max-width: none;
+                padding: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background: var(--bg-secondary);
+                flex-direction: column;
+                justify-content: center;
+                transition: left 0.3s ease;
+                border-right: 1px solid var(--border);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: 1rem;
+                max-height: 95vh;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            nav {
+                padding: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .modal-header,
+            .modal-body {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Focus Styles for Accessibility */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            
+            .hero::before {
+                animation: none;
+            }
+        }
+
+        /* High Contrast Mode Support */
+        @media (prefers-contrast: high) {
+            :root {
+                --border: #000000;
+                --shadow: rgba(0, 0, 0, 0.8);
+            }
+            
+            [data-theme="dark"] {
+                --border: #ffffff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to Content Link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">GS</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                    ☰
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>Gaurav Singh</h1>
+                    <p class="subtitle">Aspiring Python Developer | Skilled in Data Analysis & Visualization</p>
+                    <div class="typewriter" id="typewriter">Python</div>
+                    <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-size: 1.125rem;">
+                        First-year B.Tech student passionate about Python, data analysis, web development, and building products that solve real problems. I love learning fast, shipping fast, and iterating based on user feedback.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="/resume.pdf" class="btn btn-primary" download>
+                            📄 Download Resume
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            💬 Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a first-year B.Tech student with a passion for technology and problem-solving. 
+                            My journey in programming started with Python, and I've been fascinated by how data 
+                            can tell stories and drive decisions.
+                        </p>
+                        <p>
+                            I believe in building products that make a real difference in people's lives. Whether 
+                            it's connecting farmers to consumers or creating emergency assistance tools, I'm driven 
+                            by the impact technology can have on communities.
+                        </p>
+                        <div class="now-badge">Now: Learning ML Basics & Backend Auth</div>
+                        <div class="learning-chips">
+                            <span class="chip">Machine Learning</span>
+                            <span class="chip">Backend Authentication</span>
+                            <span class="chip">Performance Optimization</span>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card fade-in">
+                            <span class="stat-number">2+</span>
+                            <span>Featured Projects</span>
+                        </div>
+                        <div class="stat-card fade-in">
+                            <span class="stat-number">8+</span>
+                            <span>Technologies</span>
+                        </div>
+                        <div class="stat-card fade-in">
+                            <span class="stat-number">1</span>
+                            <span>Year Experience</span>
+                        </div>
+                        <div class="stat-card fade-in">
+                            <span class="stat-number">∞</span>
+                            <span>Passion for Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="fade-in" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">
+                    A comprehensive overview of my technical skills across different domains
+                </p>
+                
+                <div class="skills-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="programming">Programming</button>
+                    <button class="filter-btn" data-filter="data">Data & AI/ML</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="database">Databases</button>
+                    <button class="filter-btn" data-filter="cs">CS Foundations</button>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category" data-category="programming">
+                        <h3 class="category-title">Programming Languages</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">C</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="data">
+                        <h3 class="category-title">Data & AI/ML</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">NumPy</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Pandas</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Matplotlib</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Seaborn</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">AI/ML Basics</span>
+                                <span class="skill-level">Beginner</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="60"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="web">
+                        <h3 class="category-title">Web Development</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CSS</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Express</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Bootstrap</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">jQuery</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="65"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="database">
+                        <h3 class="category-title">Databases</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PL/SQL</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="70"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category" data-category="cs">
+                        <h3 class="category-title">CS Foundations</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Data Structures & Algorithms</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-level="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    A selection of projects that showcase my skills and passion for solving real-world problems
+                </p>
+                
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="webapp">Web Apps</button>
+                    <button class="filter-btn" data-filter="agritech">AgriTech</button>
+                    <button class="filter-btn" data-filter="publicgood">Public Good</button>
+                    <button class="filter-btn" data-filter="utility">Utility</button>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card" data-category="webapp agritech" data-project="agriconnect">
+                        <div class="project-image">
+                            🌾
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AgriConnect</h3>
+                            <p class="project-description">
+                                Digital platform connecting farmers with consumers, agro-companies, and laborers for direct trade and sustainable farming.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">#webapp</span>
+                                <span class="tag">#agritech</span>
+                                <span class="tag">#sustainability</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-small" onclick="openModal('agriconnect')">
+                                    View Case Study
+                                </button>
+                                <a href="https://github.com/gsr18" class="btn btn-secondary btn-small" target="_blank">
+                                    GitHub
+                                </a>
+                                <a href="#" class="btn btn-secondary btn-small">
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-category="publicgood utility health" data-project="sahayak">
+                        <div class="project-image">
+                            🚑
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Sahayak (Emergency Assist)</h3>
+                            <p class="project-description">
+                                Emergency helper for ambulance contact & blood availability lookup with accessibility-focused design.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">#publicgood</span>
+                                <span class="tag">#utility</span>
+                                <span class="tag">#health</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-small" onclick="openModal('sahayak')">
+                                    View Case Study
+                                </button>
+                                <a href="https://github.com/gsr18" class="btn btn-secondary btn-small" target="_blank">
+                                    GitHub
+                                </a>
+                                <a href="#" class="btn btn-secondary btn-small">
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="fade-in" style="background: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Experience & Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">2024 - Present</div>
+                        <h3 class="timeline-title">B.Tech in Computer Science</h3>
+                        <div class="timeline-description">
+                            <strong>[College Name - To be updated]</strong><br>
+                            First-year student focusing on Computer Science fundamentals, Data Structures, 
+                            Algorithms, and practical application development. Expected graduation: 2028.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">2024</div>
+                        <h3 class="timeline-title">AgriConnect Project</h3>
+                        <div class="timeline-description">
+                            <strong>Lead Developer</strong><br>
+                            Developed a comprehensive platform connecting farmers with consumers and resources. 
+                            Implemented full-stack solution using HTML, CSS, JavaScript, Node.js, and SQL.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-date">2024</div>
+                        <h3 class="timeline-title">Emergency Assistant Development</h3>
+                        <div class="timeline-description">
+                            <strong>Solo Developer</strong><br>
+                            Created Sahayak emergency assistance tool with focus on accessibility and 
+                            mobile-first design for critical emergency situations.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-subtitle">
+                    I'm always open to discussing new opportunities, collaborations, or just having a chat about technology
+                </p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:gaurav.singh@example.com" style="color: var(--accent); text-decoration: none;">
+                                    gaurav.singh@example.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h3>Phone</h3>
+                                <span style="color: var(--text-secondary);">+91 XXXXX XXXXX</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h3>Location</h3>
+                                <span style="color: var(--text-secondary);">Jalandhar, Punjab, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form - To be connected with Formspree or similar service -->
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Tell me about your project or just say hello!"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="http://www.linkedin.com/in/gauravsingh10" target="_blank" class="social-link" aria-label="LinkedIn">
+                        💼
+                    </a>
+                    <a href="https://github.com/gsr18" target="_blank" class="social-link" aria-label="GitHub">
+                        🐱
+                    </a>
+                    <a href="https://leetcode.com/u/GauravSingh78/" target="_blank" class="social-link" aria-label="LeetCode">
+                        🧮
+                    </a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="currentYear">2024</span> Gaurav Singh. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals for Project Case Studies -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Project Title</h2>
+                <p class="modal-subtitle" id="modalSubtitle">Project subtitle</p>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast for Form Feedback -->
+    <div id="toast" class="toast">
+        <span id="toastMessage">Message sent successfully!</span>
+    </div>
+
+    <script>
+        // =====================================
+        // PORTFOLIO WEBSITE JAVASCRIPT
+        // =====================================
+        // Custom settings: Update GitHub links, Formspree endpoint, college name, and graduation year
+        // Theme system uses localStorage to persist user preference
+        // All animations respect prefers-reduced-motion setting
+
+        // Configuration object for easy customization
+        const config = {
+            formspreeEndpoint: 'https://formspree.io/f/YOUR_FORM_ID', // Replace with your Formspree ID
+            githubUsername: 'gsr18',
+            linkedinUrl: 'http://www.linkedin.com/in/gauravsingh10',
+            leetcodeUrl: 'https://leetcode.com/u/GauravSingh78/',
+            collegeName: '[College Name - To be updated]',
+            graduationYear: '2028'
+        };
+
+        // =====================================
+        // THEME MANAGEMENT
+        // =====================================
+        class ThemeManager {
+            constructor() {
+                this.themeToggle = document.getElementById('themeToggle');
+                this.themeIcon = document.getElementById('themeIcon');
+                this.currentTheme = localStorage.getItem('theme') || 'light';
+                this.init();
+            }
+
+            init() {
+                this.setTheme(this.currentTheme);
+                this.themeToggle.addEventListener('click', () => this.toggleTheme());
+                
+                // Keyboard shortcut: T to toggle theme
+                document.addEventListener('keydown', (e) => {
+                    if (e.key.toLowerCase() === 't' && !e.target.matches('input, textarea')) {
+                        this.toggleTheme();
+                    }
+                });
+            }
+
+            setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                this.themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+                this.currentTheme = theme;
+                localStorage.setItem('theme', theme);
+            }
+
+            toggleTheme() {
+                const newTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+                this.setTheme(newTheme);
+            }
+        }
+
+        // =====================================
+        // TYPEWRITER EFFECT
+        // =====================================
+        class TypeWriter {
+            constructor(element, texts, typeSpeed = 100, deleteSpeed = 50, pauseDelay = 2000) {
+                this.element = element;
+                this.texts = texts;
+                this.typeSpeed = typeSpeed;
+                this.deleteSpeed = deleteSpeed;
+                this.pauseDelay = pauseDelay;
+                this.textIndex = 0;
+                this.charIndex = 0;
+                this.isDeleting = false;
+                this.start();
+            }
+
+            start() {
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Show static text for users who prefer reduced motion
+                    this.element.textContent = this.texts[0];
+                    return;
+                }
+                this.type();
+            }
+
+            type() {
+                const currentText = this.texts[this.textIndex];
+                
+                if (this.isDeleting) {
+                    this.element.textContent = currentText.substring(0, this.charIndex - 1);
+                    this.charIndex--;
+                } else {
+                    this.element.textContent = currentText.substring(0, this.charIndex + 1);
+                    this.charIndex++;
+                }
+
+                let typeDelay = this.isDeleting ? this.deleteSpeed : this.typeSpeed;
+
+                if (!this.isDeleting && this.charIndex === currentText.length) {
+                    typeDelay = this.pauseDelay;
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.charIndex === 0) {
+                    this.isDeleting = false;
+                    this.textIndex = (this.textIndex + 1) % this.texts.length;
+                }
+
+                setTimeout(() => this.type(), typeDelay);
+            }
+        }
+
+        // =====================================
+        // NAVIGATION MANAGEMENT
+        // =====================================
+        class Navigation {
+            constructor() {
+                this.navLinks = document.querySelectorAll('.nav-link');
+                this.mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                this.navLinksContainer = document.querySelector('.nav-links');
+                this.sections = document.querySelectorAll('section');
+                this.init();
+            }
+
+            init() {
+                this.setupSmoothScroll();
+                this.setupMobileMenu();
+                this.setupScrollSpy();
+            }
+
+            setupSmoothScroll() {
+                this.navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('href').substring(1);
+                        const targetSection = document.getElementById(targetId);
+                        
+                        if (targetSection) {
+                            const headerOffset = 80;
+                            const elementPosition = targetSection.offsetTop;
+                            const offsetPosition = elementPosition - headerOffset;
+
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+
+                            // Close mobile menu if open
+                            this.navLinksContainer.classList.remove('active');
+                        }
+                    });
+                });
+            }
+
+            setupMobileMenu() {
+                this.mobileMenuBtn.addEventListener('click', () => {
+                    this.navLinksContainer.classList.toggle('active');
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('nav')) {
+                        this.navLinksContainer.classList.remove('active');
+                    }
+                });
+            }
+
+            setupScrollSpy() {
+                const options = {
+                    threshold: 0.3,
+                    rootMargin: '-80px 0px -80px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const activeId = entry.target.id;
+                            this.navLinks.forEach(link => {
+                                link.classList.remove('active');
+                                if (link.getAttribute('href') === `#${activeId}`) {
+                                    link.classList.add('active');
+                                }
+                            });
+                        }
+                    });
+                }, options);
+
+                this.sections.forEach(section => {
+                    observer.observe(section);
+                });
+            }
+        }
+
+        // =====================================
+        // INTERSECTION OBSERVER FOR ANIMATIONS
+        // =====================================
+        class AnimationObserver {
+            constructor() {
+                this.elements = document.querySelectorAll('.fade-in');
+                this.init();
+            }
+
+            init() {
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    // Show all elements immediately for users who prefer reduced motion
+                    this.elements.forEach(el => el.classList.add('visible'));
+                    return;
+                }
+
+                const options = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, options);
+
+                this.elements.forEach(element => {
+                    observer.observe(element);
+                });
+            }
+        }
+
+        // =====================================
+        // SKILLS SECTION MANAGEMENT
+        // =====================================
+        class SkillsManager {
+            constructor() {
+                this.filterButtons = document.querySelectorAll('.skills-filters .filter-btn');
+                this.skillCategories = document.querySelectorAll('.skill-category');
+                this.skillBars = document.querySelectorAll('.skill-progress');
+                this.isAnimated = false;
+                this.init();
+            }
+
+            init() {
+                this.setupFilters();
+                this.setupSkillBarAnimation();
+            }
+
+            setupFilters() {
+                this.filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Update active button
+                        this.filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+
+                        // Filter categories
+                        const filter = button.dataset.filter;
+                        this.filterCategories(filter);
+                    });
+                });
+            }
+
+            filterCategories(filter) {
+                this.skillCategories.forEach(category => {
+                    if (filter === 'all') {
+                        category.style.display = 'block';
+                    } else {
+                        const categories = category.dataset.category;
+                        if (categories && categories.includes(filter)) {
+                            category.style.display = 'block';
+                        } else {
+                            category.style.display = 'none';
+                        }
+                    }
+                });
+            }
+
+            setupSkillBarAnimation() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && !this.isAnimated) {
+                            this.animateSkillBars();
+                            this.isAnimated = true;
+                        }
+                    });
+                }, { threshold: 0.3 });
+
+                const skillsSection = document.getElementById('skills');
+                if (skillsSection) {
+                    observer.observe(skillsSection);
+                }
+            }
+
+            animateSkillBars() {
+                this.skillBars.forEach(bar => {
+                    const level = bar.dataset.level;
+                    setTimeout(() => {
+                        bar.style.width = `${level}%`;
+                    }, Math.random() * 500);
+                });
+            }
+        }
+
+        // =====================================
+        // PROJECTS SECTION MANAGEMENT
+        // =====================================
+        class ProjectsManager {
+            constructor() {
+                this.filterButtons = document.querySelectorAll('.project-filters .filter-btn');
+                this.projectCards = document.querySelectorAll('.project-card');
+                this.init();
+            }
+
+            init() {
+                this.setupFilters();
+            }
+
+            setupFilters() {
+                this.filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Update active button
+                        this.filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+
+                        // Filter projects
+                        const filter = button.dataset.filter;
+                        this.filterProjects(filter);
+                    });
+                });
+            }
+
+            filterProjects(filter) {
+                this.projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.dataset.category;
+                        if (categories && categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            }
+        }
+
+        // =====================================
+        // MODAL MANAGEMENT
+        // =====================================
+        class ModalManager {
+            constructor() {
+                this.modal = document.getElementById('modal');
+                this.modalClose = document.getElementById('modalClose');
+                this.modalTitle = document.getElementById('modalTitle');
+                this.modalSubtitle = document.getElementById('modalSubtitle');
+                this.modalBody = document.getElementById('modalBody');
+                this.focusableElements = [];
+                this.previouslyFocusedElement = null;
+                this.init();
+            }
+
+            init() {
+                this.modalClose.addEventListener('click', () => this.closeModal());
+                
+                // Close modal on backdrop click
+                this.modal.addEventListener('click', (e) => {
+                    if (e.target === this.modal) {
+                        this.closeModal();
+                    }
+                });
+
+                // Close modal on Escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && this.modal.classList.contains('active')) {
+                        this.closeModal();
+                    }
+                    
+                    // Trap focus within modal
+                    if (this.modal.classList.contains('active') && e.key === 'Tab') {
+                        this.trapFocus(e);
+                    }
+                });
+            }
+
+            openModal(projectId) {
+                const projectData = this.getProjectData(projectId);
+                
+                this.modalTitle.textContent = projectData.title;
+                this.modalSubtitle.textContent = projectData.subtitle;
+                this.modalBody.innerHTML = projectData.content;
+                
+                this.previouslyFocusedElement = document.activeElement;
+                this.modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                // Set focus to close button
+                this.modalClose.focus();
+                
+                // Update focusable elements
+                this.updateFocusableElements();
+            }
+
+            closeModal() {
+                this.modal.classList.remove('active');
+                document.body.style.overflow = '';
+                
+                // Return focus to previously focused element
+                if (this.previouslyFocusedElement) {
+                    this.previouslyFocusedElement.focus();
+                }
+            }
+
+            updateFocusableElements() {
+                const focusableSelectors = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+                this.focusableElements = Array.from(this.modal.querySelectorAll(focusableSelectors))
+                    .filter(el => !el.disabled && el.offsetParent !== null);
+            }
+
+            trapFocus(e) {
+                if (this.focusableElements.length === 0) return;
+                
+                const firstFocusable = this.focusableElements[0];
+                const lastFocusable = this.focusableElements[this.focusableElements.length - 1];
+                
+                if (e.shiftKey) {
+                    if (document.activeElement === firstFocusable) {
+                        lastFocusable.focus();
+                        e.preventDefault();
+                    }
+                } else {
+                    if (document.activeElement === lastFocusable) {
+                        firstFocusable.focus();
+                        e.preventDefault();
+                    }
+                }
+            }
+
+            getProjectData(projectId) {
+                const projects = {
+                    agriconnect: {
+                        title: 'AgriConnect',
+                        subtitle: 'Digital platform connecting farmers with consumers and agro-companies',
+                        content: `
+                            <div class="modal-section">
+                                <h3>Problem Statement</h3>
+                                <p>Farmers often struggle with fair pricing, direct market access, and finding reliable resources for sustainable farming. Traditional supply chains involve multiple intermediaries, reducing farmers' profits and limiting consumer access to fresh, local produce.</p>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Solution Approach</h3>
+                                <p>AgriConnect bridges this gap by providing a comprehensive digital platform where farmers can directly connect with consumers, access agricultural resources, and find employment opportunities in the agricultural sector.</p>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Key Features</h3>
+                                <ul>
+                                    <li><strong>Direct Farm-to-Consumer Marketplace:</strong> Simple interface for farmers to list products with transparent pricing</li>
+                                    <li><strong>Resource Knowledge Hub:</strong> Static knowledge base providing soil health tips, climate guidance, and best farming practices</li>
+                                    <li><strong>Agricultural Job Board:</strong> Platform connecting farm laborers with local employment opportunities</li>
+                                    <li><strong>Sustainable Farming Resources:</strong> Educational content promoting environmentally friendly farming methods</li>
+                                    <li><strong>Community Support System:</strong> Features to build networks among farmers, consumers, and agricultural professionals</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Technical Implementation</h3>
+                                <p><strong>Role:</strong> Lead Developer<br>
+                                <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript (ES6+), Node.js, Express.js, SQL Database</p>
+                                
+                                <p>The platform was built with a focus on simplicity and accessibility, ensuring that users with varying levels of technical expertise could easily navigate and utilize the platform.</p>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Challenges & Solutions</h3>
+                                <ul>
+                                    <li><strong>User Experience:</strong> Designed intuitive interfaces considering the diverse technical backgrounds of rural users</li>
+                                    <li><strong>Data Management:</strong> Implemented efficient database structures to handle product listings, user profiles, and resource content</li>
+                                    <li><strong>Scalability:</strong> Built with modular architecture to support future enhancements and increased user base</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Impact & Learnings</h3>
+                                <p>This project taught me the importance of understanding user needs in different contexts. Working on AgriConnect helped me appreciate how technology can address real-world problems in traditional industries. I learned valuable lessons about full-stack development, database design, and creating user-centered solutions.</p>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Future Enhancements</h3>
+                                <ul>
+                                    <li>Mobile application for better accessibility</li>
+                                    <li>Integration with payment gateways for seamless transactions</li>
+                                    <li>AI-powered crop recommendation system</li>
+                                    <li>Weather API integration for farming insights</li>
+                                </ul>
+                            </div>
+                        `
+                    },
+                    sahayak: {
+                        title: 'Sahayak (Emergency Assist)',
+                        subtitle: 'Emergency helper for ambulance contact & blood availability lookup',
+                        content: `
+                            <div class="modal-section">
+                                <h3>Problem Statement</h3>
+                                <p>During medical emergencies, people often waste precious time searching for ambulance contacts and blood donors. Critical information is scattered across different sources, and existing solutions may not be optimized for emergency situations where every second counts.</p>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Solution Approach</h3>
+                                <p>Sahayak provides instant access to essential emergency information through a clean, accessible interface designed specifically for high-stress situations. The application prioritizes speed, clarity, and accessibility above all else.</p>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Key Features</h3>
+                                <ul>
+                                    <li><strong>Instant Emergency Contacts:</strong> Quick access to local ambulance and emergency service numbers</li>
+                                    <li><strong>Blood Donor Database:</strong> Community-maintained database of blood donors with availability status</li>
+                                    <li><strong>High-Contrast UI:</strong> Designed with accessibility principles for visibility during stress</li>
+                                    <li><strong>Mobile-First Design:</strong> Optimized for smartphones as the primary access device during emergencies</li>
+                                    <li><strong>Offline Functionality:</strong> Critical information cached for access without internet connectivity</li>
+                                    <li><strong>One-Touch Calling:</strong> Direct dial functionality without navigation complexity</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Technical Implementation</h3>
+                                <p><strong>Role:</strong> Solo Developer<br>
+                                <strong>Tech Stack:</strong> HTML5, CSS3, JavaScript (Vanilla), Service Workers for offline functionality</p>
+                                
+                                <p>The application was built with performance and accessibility as primary concerns. Every design decision was made considering the high-stress nature of emergency situations.</p>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Design Principles</h3>
+                                <ul>
+                                    <li><strong>Accessibility First:</strong> High contrast ratios, large touch targets, screen reader compatibility</li>
+                                    <li><strong>Minimal Cognitive Load:</strong> Clear visual hierarchy with essential information prominently displayed</li>
+                                    <li><strong>Fast Performance:</strong> Lightweight implementation for quick loading even on slower networks</li>
+                                    <li><strong>Universal Usability:</strong> Tested across different age groups and technical skill levels</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Challenges & Solutions</h3>
+                                <ul>
+                                    <li><strong>Data Accuracy:</strong> Implemented verification systems for contact information to ensure reliability</li>
+                                    <li><strong>Emergency UX:</strong> Conducted research on emergency response patterns to optimize user flow</li>
+                                    <li><strong>Cross-Platform Compatibility:</strong> Ensured consistent performance across different devices and browsers</li>
+                                    <li><strong>Privacy Concerns:</strong> Balanced information sharing with donor privacy protection</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Impact & Learnings</h3>
+                                <p>Developing Sahayak taught me the critical importance of user-centered design, especially when designing for high-stakes scenarios. I learned about accessibility standards (WCAG), progressive web app principles, and how to balance feature richness with simplicity.</p>
+                                
+                                <p>This project reinforced my belief in technology's potential to serve public good and highlighted the responsibility developers have when building tools that could impact lives.</p>
+                            </div>
+                            
+                            <div class="modal-section">
+                                <h3>Future Enhancements</h3>
+                                <ul>
+                                    <li>GPS integration for location-based emergency services</li>
+                                    <li>Integration with national emergency response systems</li>
+                                    <li>Multi-language support for diverse communities</li>
+                                    <li>Real-time hospital bed availability tracking</li>
+                                </ul>
+                            </div>
+                        `
+                    }
+                };
+                
+                return projects[projectId] || {
+                    title: 'Project Not Found',
+                    subtitle: 'Project data not available',
+                    content: '<p>Sorry, the project information is not available.</p>'
+                };
+            }
+        }
+
+        // =====================================
+        // CONTACT FORM MANAGEMENT
+        // =====================================
+        class ContactForm {
+            constructor() {
+                this.form = document.getElementById('contactForm');
+                this.toast = document.getElementById('toast');
+                this.toastMessage = document.getElementById('toastMessage');
+                this.init();
+            }
+
+            init() {
+                if (this.form) {
+                    this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+                }
+            }
+
+            async handleSubmit(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(this.form);
+                const data = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    message: formData.get('message')
+                };
+
+                // Basic validation
+                if (!this.validateForm(data)) {
+                    return;
+                }
+
+                try {
+                    // Simulate form submission (replace with actual Formspree endpoint)
+                    // const response = await fetch(config.formspreeEndpoint, {
+                    //     method: 'POST',
+                    //     body: formData,
+                    //     headers: {
+                    //         'Accept': 'application/json'
+                    //     }
+                    // });
+
+                    // For demo purposes, simulate success
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                    
+                    this.showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
+                    this.form.reset();
+                    
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    this.showToast('Failed to send message. Please try again.', 'error');
+                }
+            }
+
+            validateForm(data) {
+                if (!data.name.trim()) {
+                    this.showToast('Please enter your name.', 'error');
+                    return false;
+                }
+
+                if (!data.email.trim() || !this.isValidEmail(data.email)) {
+                    this.showToast('Please enter a valid email address.', 'error');
+                    return false;
+                }
+
+                if (!data.message.trim()) {
+                    this.showToast('Please enter a message.', 'error');
+                    return false;
+                }
+
+                return true;
+            }
+
+            isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            showToast(message, type = 'success') {
+                this.toastMessage.textContent = message;
+                this.toast.className = `toast ${type === 'error' ? 'error' : ''}`;
+                this.toast.classList.add('show');
+
+                setTimeout(() => {
+                    this.toast.classList.remove('show');
+                }, 4000);
+            }
+        }
+
+        // =====================================
+        // UTILITY FUNCTIONS
+        // =====================================
+        function updateCopyrightYear() {
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        }
+
+        // Global function for opening modals (called from HTML)
+        function openModal(projectId) {
+            window.modalManager.openModal(projectId);
+        }
+
+        // Search functionality (keyboard shortcut: /)
+        function setupSearchShortcut() {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === '/' && !e.target.matches('input, textarea')) {
+                    e.preventDefault();
+                    // Simple search implementation - focuses on navigation
+                    const searchTerm = prompt('Search sections (home, about, skills, projects, experience, contact):');
+                    if (searchTerm) {
+                        const targetElement = document.getElementById(searchTerm.toLowerCase());
+                        if (targetElement) {
+                            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        } else {
+                            alert('Section not found. Available sections: home, about, skills, projects, experience, contact');
+                        }
+                    }
+                }
+            });
+        }
+
+        // Handle hash routing for direct section access
+        function setupHashRouting() {
+            function handleHashChange() {
+                const hash = window.location.hash.substring(1);
+                if (hash) {
+                    const targetElement = document.getElementById(hash);
+                    if (targetElement) {
+                        setTimeout(() => {
+                            const headerOffset = 80;
+                            const elementPosition = targetElement.offsetTop;
+                            const offsetPosition = elementPosition - headerOffset;
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        }, 100);
+                    } else {
+                        // Show soft notice for invalid hash
+                        console.warn(`Section "${hash}" not found. Available sections: home, about, skills, projects, experience, contact`);
+                    }
+                }
+            }
+
+            window.addEventListener('hashchange', handleHashChange);
+            
+            // Handle initial hash on page load
+            if (window.location.hash) {
+                handleHashChange();
+            }
+        }
+
+        // Performance optimization - lazy load images when implemented
+        function setupLazyLoading() {
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.classList.remove('lazy');
+                                imageObserver.unobserve(img);
+                            }
+                        }
+                    });
+                });
+
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+        }
+
+        // =====================================
+        // INITIALIZATION
+        // =====================================
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all components
+            window.themeManager = new ThemeManager();
+            window.navigation = new Navigation();
+            window.animationObserver = new AnimationObserver();
+            window.skillsManager = new SkillsManager();
+            window.projectsManager = new ProjectsManager();
+            window.modalManager = new ModalManager();
+            window.contactForm = new ContactForm();
+
+            // Initialize typewriter effect
+            const typewriterElement = document.getElementById('typewriter');
+            if (typewriterElement) {
+                new TypeWriter(typewriterElement, [
+                    'Python Developer',
+                    'Data Analysis',
+                    'Web Development',
+                    'Problem Solver'
+                ]);
+            }
+
+            // Setup utility functions
+            updateCopyrightYear();
+            setupSearchShortcut();
+            setupHashRouting();
+            setupLazyLoading();
+
+            console.log('🚀 Gaurav Singh Portfolio initialized successfully!');
+            console.log('⌨️  Keyboard shortcuts: T (toggle theme), / (search sections)');
+        });
+
+        // Handle resize events for responsive behavior
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                // Recalculate any layout-dependent features if needed
+                console.log('Layout recalculated for new viewport size');
+            }, 250);
+        });
+
+        // Service Worker registration for PWA capabilities (optional)
+        if ('serviceWorker' in navigator && location.protocol === 'https:') {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+    </script>
+
+    <!-- 
+        =====================================
+        CUSTOMIZATION INSTRUCTIONS
+        =====================================
+        
+        To customize this portfolio:
+        
+        1. PERSONAL INFORMATION:
+           - Update social links in the footer section
+           - Replace placeholder email and phone in contact section
+           - Update the college name and graduation year in the timeline
+        
+        2. PROJECTS:
+           - Add your actual GitHub repository links
+           - Replace demo links with actual project URLs
+           - Add more projects by following the existing card structure
+           - Update project case studies in the modalManager.getProjectData() function
+        
+        3. CONTACT FORM:
+           - Sign up for Formspree (https://formspree.io)
+           - Replace 'YOUR_FORM_ID' in config.formspreeEndpoint with your actual Formspree form ID
+           - Update the email address in the contact section
+        
+        4. SEO & META:
+           - Update the domain name in Open Graph and Twitter Card meta tags
+           - Add your actual website URL
+           - Create and add favicon files (favicon.ico, apple-touch-icon.png, etc.)
+        
+        5. RESUME:
+           - Add your actual resume PDF to the project root
+           - Update the download link in the hero section
+        
+        6. ANALYTICS (Optional):
+           - Add Google Analytics or other tracking code before closing </body> tag
+        
+        7. DEPLOYMENT:
+           - For robots.txt: Create a file in root with your sitemap URL
+           - For sitemap.xml: Generate based on your actual pages and sections
+           - Consider adding a service worker for offline functionality
+        
+        Remember to test across different devices and browsers before deploying!
+    -->
+</body>
+</html>
